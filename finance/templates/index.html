@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My portfolio
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+        <h3>My portfolio</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Stock</th>
+                    <th>Number of shares</th>
+                    <th>Actual price</th>
+                    <th>Holding value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in list_of_stocks %}
+                    <tr>
+                        <td>{{ stock["stock_symbol"] }}</td>
+                        <td>{{ stock["stock_volume"] }}</td>
+                        <td>$ {{ stock["actual_price"] }}</td>
+                        <td>$ {{ stock["holding_value"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Total value of shares</th>
+                    <th>Cash</th>
+                    <th>Total value of shares & cash</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$ {{ holdings_cumulated }}</td>
+                    <td>$ {{ available_cash }}</td>
+                    <td>$ {{ total }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+{% endblock %}
