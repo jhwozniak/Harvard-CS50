@@ -1,0 +1,39 @@
+{% extends "layout_d.html" %}
+
+{% block title %}
+    Active visits
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Doctor</th>
+                    <th>Specialisation</th>
+                    <th>Patient</th>
+                    <th>Diagnosis</th>
+                    <th>Treatment</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for visit in booked_visits %}
+                    <form action="/_d" method="post" name=booking_details">
+                        <tr>
+                            <td><input type="hidden" value="{{ visit["date"] }}" name="date">{{ visit["date"] }}</td>
+                            <td><input type="hidden" value="{{ visit["doctor"] }}" name="doctor">{{ visit["doctor"] }}</td>
+                            <td><input type="hidden" value="{{ visit["specialisation"] }}" name="specialisation">{{ visit["specialisation"] }}</td>
+                            <td><input type="hidden" value="{{ visit["patient"] }}" name="patient">{{ visit["patient"] }}</td>
+                            <td><input autocomplete="off" name="diagnosis" placeholder="Enter diagnosis"></td>
+                            <td><input autocomplete="off" name="treatment" placeholder="Enter treatment"></td>
+                            <td><button class="btn btn-primary" type="submit">Send</button></td>
+                        </tr>
+                    </form>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+{% endblock %}

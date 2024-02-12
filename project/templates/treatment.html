@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+         <table class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Doctor</th>
+                    <th>Specialisation</th>
+                    <th>Status</th>
+                    <th>Diagnosis</th>
+                    <th>Treatment</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for visit in completed_visits %}
+                    <tr>
+                        <td>{{ visit["date"] }}</td>
+                        <td>{{ visit["doctor"] }}</td>
+                        <td>{{ visit["specialisation"] }}</td>
+                        <td>{{ visit["status"] }}</td>
+                        <td>{{ visit["diagnosis"] }}</td>
+                        <td>{{ visit["treatment"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+{% endblock %}

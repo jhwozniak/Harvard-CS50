@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Booking
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Doctor</th>
+                    <th>Specialisation</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for visit in list_of_visits %}
+                    <form action="/book" method="post" name="booking_details">
+                        <tr>
+                            <td><input type="hidden" value="{{ visit["date"] }}" name="date"> {{ visit["date"] }}</td>
+                            <td><input type="hidden" value="{{ visit["doctor"] }}" name="doctor">{{ visit["doctor"] }}</td>
+                            <td><input type="hidden" value="{{ visit["specialisation"] }}" name="specialisation">{{ visit["specialisation"] }}</td>
+                            <td><button class="btn btn-primary" type="submit">Book</button></td>
+                        </tr>
+                    </form>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+{% endblock %}

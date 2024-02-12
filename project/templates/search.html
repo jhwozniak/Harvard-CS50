@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Booking
+{% endblock %}
+
+{% block main %}
+
+<form action="/search" method="post">
+
+        <select name="specialisation" class="form-select">
+            <option disabled selected>Choose specialisation...</option>
+            {% for visit in list_of_free_visits %}
+                <option value="{{ visit["specialisation"] }}">{{ visit["specialisation"] }}</option>
+            {% endfor %}
+        </select>
+        <p></p>
+        <button class="btn btn-primary" type="submit">Search</button>
+</form>
+
+
+{% endblock %}

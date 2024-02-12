@@ -1,0 +1,17 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+
+.badge
+{
+    background-color: #537fbe;
+    font-size: x-large;
+}
