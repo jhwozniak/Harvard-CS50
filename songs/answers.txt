@@ -1,0 +1,13 @@
+Q: If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+A: When we input such query:
+    SELECT AVG(energy), AVG(valence), AVG(danceability)
+    FROM songs;
+we get the results of 0.65906, 0.48443 and 0.71646. This lets us conclude that the average song can be characterized as:
+    - pretty energetic (result > 0.5),
+    - of medium valence (neither sad nor happy, result close to 0.5) and
+    - pretty danceable (result > 0.5).
+I think this should result in 'aura' being a mix of orange and yellow.
+
+
+Q: Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+A: We could imagine calculating weighted averages of energy, valence and danceability with weights being eg. number of playbacks of a particular song.

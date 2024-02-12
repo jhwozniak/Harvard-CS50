@@ -1,0 +1,20 @@
+sort1 uses: bubble sort
+
+How do you know?: For upperbound (random/reversed) sort1 has running times which increase steeply (exponentially) with n.
+This is similar for sort3 and it lets us think of Big O for sort1 close to n^2.
+However, comparing to sort3, sort1 has much shorter running times for lowerbound (sorted), which are close to sort2 times.
+Therefore, we can assume omega closer to n as in bubble sort and not of n^2 as in selection sort for omega.
+
+sort2 uses: merge sort
+
+How do you know?: It has smallest running times than sort1 and sort3, both on upperbound (random/reversed) and lowerbound (sorted).
+Running time also increases less steeply (exponentially) than sort1 and sort3 with the increasing n, so I think it is rather closer to
+nlogn than n^2 for both Big O and omega.
+
+sort3 uses: selection sort
+
+How do you know?: It has slower running time than sort2 and has similar running times for upperbound (random/reversed) and lowerbound (sorted).
+Running times also increases more steeply (exponentially) than in sort 2, so I assume they are closer to n^2 for Big O (upperbound).
+Sort3 has also longest running times for lowerbound (sorted). These are very long for the largest n of 50,000 numbers, especially
+when we compare them with sort1 and sort2. Running times for lowerbound (sorted) are similar to upperbound (random/reversed), so I think
+they are also closer to n^2 for omega.
