@@ -1,0 +1,24 @@
+Times:
+
+10 simulations: 0m0.027s
+100 simulations: 0m0.028s
+1000 simulations: 0m0.037s
+10000 simulations: 0m0.099s
+100000 simulations: 0m0.780s
+1000000 simulations: 0m7.666s
+
+Questions:
+
+Which predictions, if any, proved incorrect as you increased the number of simulations?:
+
+With a small number of simulations, the list of predictions was relatively short (6 teams for N = 10, 11 teams for N = 100). As I kept increasing the number
+of predictions:
+     -  the list was getting longer, with new winners joining the list
+     -  Brazil lost first place for Belgium (for N >= 100)
+     -  for N = 10 France received 10% probability of winning, to receive 2-3% in another simulations (for N>= 100)
+     -  top 6 teams, although sometimes swapped places, remained the same with >10% probability of winning
+
+Suppose you're charged a fee for each second of compute time your program uses.
+After how many simulations would you call the predictions "good enough"?:
+
+It seems that the predictions stabilized about 1000 simulations. Further increasing of simulations did not significantly improved the predicitions.

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+                document.querySelector('#button1').addEventListener('click', function() {
+                    let b = document.querySelector('#button1');
+                    b.style.backgroundColor = 'red';
+                    alert('Incorrect.');
+                });
+
+                document.querySelector('#button2').addEventListener('click', function() {
+                    let b = document.querySelector('#button2');
+                    b.style.backgroundColor = 'red';
+                    alert('Incorrect.');
+                });
+
+                document.querySelector('#button3').addEventListener('click', function() {
+                    let b = document.querySelector('#button3');
+                    b.style.backgroundColor = 'green';
+                    alert('Correct.');
+                });
+
+                document.querySelector('#button4').addEventListener('click', function() {
+                    let b = document.querySelector('#button4');
+                    b.style.backgroundColor = 'red';
+                    alert('Incorrect.');
+                });
+
+                document.querySelector('#button5').addEventListener('click', function() {
+                    let b = document.querySelector('#button5');
+                    b.style.backgroundColor = 'red';
+                    alert('Incorrect.');
+                });
+
+                document.querySelector('form').addEventListener('submit', function() {
+                    let answer = document.querySelector('#answer').value;
+                    let inputField = document.querySelector('#answer');
+                    if (answer == 'Poland') {
+                        inputField.style.backgroundColor = 'green';
+                        alert('Correct.');
+                    }
+                    else {
+                        inputField.style.backgroundColor = 'red';
+                        alert('Incorrect.');
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What was the favorite dessert of pope John Paul II?</h3>
+                <button id="button1">cheesecake</button>
+                <button id="button2">ice cream</button>
+                <button id="button3">kremówka</button>
+                <button id="button4">pączki</button>
+                <button id="button5">brownie</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Kraków used to be a capital of which European country?</h3>
+                    <form>
+                        <input autocomplete="off" autofocus id="answer">
+                        <button id="button6">Check answer</button>
+                    </form>
+
+
+            </div>
+        </div>
+    </body>
+</html>
