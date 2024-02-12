@@ -1,0 +1,40 @@
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  h3 {
+    font-style: italic;
+    }
+
+  .nav-link {
+      display: block;
+      color: #f3b41b;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+  .active {
+      background-color: #212529;
+    }
+
+  #workshop_front {
+    height: 250px;
+    width: 350px;
+  }
+
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer {
+    color: #f3b41b;
+  }
+
+  li a {
+    text-align: center;
+  }
+
+

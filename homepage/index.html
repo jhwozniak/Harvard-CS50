@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>JJ Woodworks - home</title>
+    </head>
+    <body>
+      <!--logo and navigation bar with dropdown list-->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="JJ Woodworks Logo" style="width:100px;">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">about</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">my projects</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="project1.html">shoe cabinet</a></li>
+                      <li><a class="dropdown-item" href="project2.html">dining table</a></li>
+                      <li><a class="dropdown-item" href="project3.html">pergola</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        <!--My photo with short description-->
+        <div class="container mt-5">
+            <div class="row">
+              <div class="col-sm-4">
+                  <img alt="My workshop" id="workshop_front" src="workshop_front.jpg">
+              </div>
+              <div class="col-sm-8">
+                  <h3>Welcome to JJ Woodworks!</h3>
+                  <p> We are small family woodworking company based close to Warsaw, Poland. </p>
+                  <p> We specialize in custom woodworking projects, including unique free-standing pieces for individuals and complex solid-wood fit-outs for companies. We work only with 100%-certified solid wood.</p>
+                  <p> Please feel free to check our projects and contact us for free estimation.</p>
+              </div>
+            </div>
+        </div>
+        <p></p>
+
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3" ></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+          </div>
+
+          <!-- The slideshow/carousel -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="bed_frame.jpg" alt="Bedframe" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="bookshelves.jpg" alt="Bookshelves" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="coffee_table.jpg" alt="Coffee table" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="kids_cabinet.jpg" alt="Kids cabinet" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="pergola.jpg" alt="Pergola" class="d-block" style="width:100%">
+            </div>
+          </div>
+
+          <!-- Left and right controls/icons -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
+        <!--Simple footer-->
+        <div class="mt-5 bg-dark text-white text-center">
+            <p class="footer">Copyright &#169; JJ Woodworks</p>
+        </div>
+
+</body>
+</html>
